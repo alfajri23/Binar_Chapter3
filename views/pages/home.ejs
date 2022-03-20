@@ -1,0 +1,82 @@
+<div style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+      <li class="breadcrumb-item fw-bold">Dashboard</li>
+      <li class="breadcrumb-item">Dashboard</li>
+  </ol>
+</div>
+
+<div>
+  <h4 class="fw-bold">Dashboard</h4>
+
+  <div class="my-4">
+    <h6 class="text-label">List User</h6>
+    <table id="myTable" class="table">
+        <thead class="table-light">
+          <tr>
+            <th scope="col">No</th>
+            <th scope="col">User Email</th>
+            <th scope="col">Car</th>
+            <th scope="col">Start Rent</th>
+            <th scope="col">Finish Rent</th>
+            <th scope="col">Price</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for( let index = 1; index < 11; index++ ) { %>
+            <tr>
+              <td><%= index  %> </td>
+              <td>User Email</td>
+              <td>Car</td>
+              <td>Start Rent</td>
+              <td>Finish Rent</td>
+              <td>Price</td>
+              <td>Status</td>
+            </tr>
+          <% } %>
+        </tbody>
+    </table>
+  </div>
+
+  <div class="my-4">
+    <h6 class="text-label">List Car</h6>
+    <table id="myTable" class="table">
+        <thead class="table-light">
+          <tr>
+            <th scope="col">No</th>
+            <th scope="col">Name</th>
+            <th scope="col">Category</th>
+            <th scope="col">Price</th>
+            <th scope="col">Start Rent</th>
+            <th scope="col">Finish Rent</th>
+            <th scope="col">Created at</th>
+            <th scope="col">Updated at</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for( let index = 1; index < 11; index++ ) { %>
+            <tr>
+              <td><%= index  %> </td>
+              <td>Name</th>
+              <td>Category</th>
+              <td>Price</th>
+              <td>Start Rent</th>
+              <td>Finish Rent</th>
+              <td>Created at</th>
+              <td>Updated at</th>
+            </tr>
+          <% } %>
+        </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+<script>
+    $(document).ready( function () {
+        $('#myTable').DataTable({
+            dom: 'rtilp',
+        });
+    } );
+</script>
