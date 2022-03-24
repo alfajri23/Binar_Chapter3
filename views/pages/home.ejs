@@ -10,7 +10,7 @@
 
   <div class="my-4">
     <h6 class="text-label">List User</h6>
-    <table id="myTable" class="table">
+    <table class="myTable" class="table">
         <thead class="table-light">
           <tr>
             <th scope="col">No</th>
@@ -23,24 +23,24 @@
           </tr>
         </thead>
         <tbody>
-          <% for( let index = 1; index < 11; index++ ) { %>
+          <% item.forEach(e => { %>
             <tr>
-              <td><%= index  %> </td>
-              <td>User Email</td>
-              <td>Car</td>
-              <td>Start Rent</td>
-              <td>Finish Rent</td>
-              <td>Price</td>
-              <td>Status</td>
+              <td><%= e.no  %> </td>
+              <td><%= e.email %></td>
+              <td><%= e.cars  %></td>
+              <td><%= e.start  %></td>
+              <td><%= e.finish  %></td>
+              <td><%= e.price  %></td>
+              <td><%= e.status  %></td>
             </tr>
-          <% } %>
+          <% }) %>
         </tbody>
     </table>
   </div>
 
   <div class="my-4">
     <h6 class="text-label">List Car</h6>
-    <table id="myTable" class="table">
+    <table class="myTable" class="table">
         <thead class="table-light">
           <tr>
             <th scope="col">No</th>
@@ -54,18 +54,18 @@
           </tr>
         </thead>
         <tbody>
-          <% for( let index = 1; index < 11; index++ ) { %>
+          <% items.forEach(e => { %>
             <tr>
-              <td><%= index  %> </td>
-              <td>Name</th>
-              <td>Category</th>
-              <td>Price</th>
-              <td>Start Rent</th>
-              <td>Finish Rent</th>
-              <td>Created at</th>
-              <td>Updated at</th>
+              <td><%= e.no  %> </td>
+              <td><%= e.nama  %></th>
+              <td><%= e.kategori  %></th>
+              <td><%= e.harga  %></th>
+              <td><%= e.start  %></th>
+              <td><%= e.finish  %></th>
+              <td><%= e.create  %></th>
+              <td><%= e.update  %></th>
             </tr>
-          <% } %>
+          <% }) %>
         </tbody>
     </table>
   </div>
@@ -75,7 +75,7 @@
 
 <script>
     $(document).ready( function () {
-        $('#myTable').DataTable({
+        $('.myTable').DataTable({
             dom: 'rtilp',
         });
     } );

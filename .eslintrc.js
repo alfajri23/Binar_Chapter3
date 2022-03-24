@@ -13,6 +13,6 @@ module.exports = {
   rules: {
     semi: ["error", "always"],
     quotes: ["error", "double"],
-    linebreak-style: 0
+    //linebreak-style: 0
   },
 };
