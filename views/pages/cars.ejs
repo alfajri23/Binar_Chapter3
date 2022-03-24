@@ -21,21 +21,21 @@
 </div>
 
 <div class="d-flex flex-wrap justify-content-between">
-    <% for( let index = 1; index < 11; index++ ) { %>
+    <% items.forEach(e => { %>
     <div class="card my-3" style="width: 20rem;">
         <span class="p-4">
-            <img src="images/car.png" class="card-img-top" alt="...">
+            <img src="<%= e.gambar  %>" class="card-img-top" alt="...">
         </span>
         <div class="card-body">
-            <p class="card-text mb-0">Nama/Tipe Mobil</p>
-            <h5 class="card-title fw-bold mb-3">Rp 430.000 / hari</h5>
+            <p class="card-text mb-0"><%= e.nama %>/<%= e.kategori %></p>
+            <h5 class="card-title fw-bold mb-3"><%= e.harga  %> / hari</h5>
             <p class="card-text mb-1 fw-light">
                 <i class="fa-solid fa-key"></i>
-                Start rent - Finish rent
+                <%= e.start  %> - <%= e.finish  %>
             </p>
             <p class="card-text mb-0 fw-light">
                 <i class="fa-solid fa-clock"></i>
-                Updated at 4 Apr 2022, 09.00
+                Updated at <%= e.update  %>
             </p>
 
             <div class="row mt-4">
@@ -55,7 +55,7 @@
 
         </div>
     </div>
-    <% } %>
+    <% }) %>
 </div>
 
 <!-- Modal -->
